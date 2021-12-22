@@ -1,4 +1,3 @@
-import './style.css'
 import * as THREE from 'three';
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
@@ -27,6 +26,17 @@ const sunGeometry = new THREE.SphereGeometry(7, 32, 16);
 const sunTexture = new THREE.TextureLoader().load('suntexture.jpg')
 const sunGeometryMaterial = new THREE.MeshStandardMaterial({map: sunTexture})
 const sun = new THREE.Mesh(sunGeometry, sunGeometryMaterial)
+sun.position.setZ(1)
+scene.add(sun)
+
+//moon
+const moonGeometry = new THREE.SphereGeometry(4, 32, 16)
+const moonTexture = new THREE.TextureLoader().load('moontexture.jpg')
+const moonGeometryMaterial = new THREE.MeshStandardMaterial({map: moonTexture})
+const moon = new THREE.Mesh(moonGeometry, moonGeometryMaterial)
+moon.position.setZ(55)
+scene.add(moon)
+
 
 //earth
 const earthGeometry = new THREE.SphereGeometry(6, 32, 16);
@@ -36,11 +46,6 @@ const earth = new THREE.Mesh(earthGeometry, earthGeometryMaterial);
 scene.add(earth);
 
 earth.position.setZ(30)
-
-//Position of sun
-sun.position.x = 17
-sun.position.y = 10
-scene.add(sun)
 
 //Add random stars
 function addStar() {
@@ -59,10 +64,38 @@ Array(100).fill().forEach(addStar);
 function animate() {
   requestAnimationFrame(animate);
   //Animating the sun
-  sun.rotation.y += 0.01;
+  sun.rotation.z += 0.01;
+
+  //Animating the moon
+  moon.rotation.y += 0.01;
+
+  //Animating the earth
+  earth.rotation.y += 0.01;
 
   //Orbit Controls
   orbitControls.update();
   renderer.render(scene, camera);
 }
 animate();
+
+function moveCamera() {
+  const top = document.body.getBoundingClientRect().top
+
+  sun.rotation.x += 0.07;
+  sun.rotation.y += 0.02;
+  sun.rotation.z += 0.05;
+
+  earth.rotation.x += 0.07;
+  earth.rotation.y += 0.02;
+  earth.rotation.z += 0.05;
+
+  moon.rotation.x += 0.07;
+  moon.rotation.y += 0.02;
+  moon.rotation.z += 0.05;
+
+  camera.position.z = top * 0.01;
+  camera.position.x = top * -0.0041;
+  camera.position.y = top * -0.02;
+}
+
+document.body.onscroll = moveCamera
