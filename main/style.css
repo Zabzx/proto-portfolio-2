@@ -1,9 +1,50 @@
+/*Global*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+body {
+  overflow-x: hidden;
+  font-family: 'Bebas Neue', cursive;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 canvas {
   position: fixed;
   top: 0;
   left: 0;
 }
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
 main {
   position: absolute;
-  height: 200vh;
+  width: 100%;
+}
+
+/*Header*/
+.header-container {
+  background-color: black;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  align-items: center;
+  height: 100px;
+}
+.nav-links {
+  display: flex;
+}
+.nav-links li {
+  margin-left: 70px;
+}
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+}
+body {
+  color: white;
 }
