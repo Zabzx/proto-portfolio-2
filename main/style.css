@@ -20,7 +20,6 @@ canvas {
 }
 main {
   position: absolute;
-  width: 100%;
 }
 
 /*Header*/
@@ -55,4 +54,66 @@ nav a {
   color: white;
   padding: 20px;
   background-color: rgba(0, 0, 0, 0.8);
+  width: 50%;
+}
+.hero h1 {
+  font-size: 50px;
+  background: -webkit-linear-gradient(#eee, #3062F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.hero p {
+  font-size: 25px;
+}
+.read-more {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #3062F7;
+  color: white;
+  font-size: 20px;
+  font-family: 'Bebas Neue', cursive;
+  cursor: pointer;
+}
+
+/*Projects*/
+.pr-h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 20px;
+}
+.pr-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+  justify-items: center;
+}
+.projects {
+  background-color: rgba(0, 0, 0, 0.8);
+  margin-top: 200px;
+  color: white;
+}
+.project {
+  background-color: white;
+  color: black;
+  width: 90%;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.project h1, .project p {
+  text-align: center;
+}
+.project h1 {
+  font-size: 40px;
+}
+.project p {
+  padding: 20px;
+  font-size: 20px;
+}
+.project-img {
+  width: 100%;
+}
+.project-stack {
+  margin-left: 20px;
 }
