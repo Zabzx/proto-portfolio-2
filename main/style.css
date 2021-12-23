@@ -117,3 +117,16 @@ nav a {
 .project-stack {
   margin-left: 20px;
 }
+.project-links {
+  text-align: center;
+}
+.project-links button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 20px;
+  background-color: #3062F7;
+  padding: 10px 15px;
+  color: white;
+  cursor: pointer;
+}
