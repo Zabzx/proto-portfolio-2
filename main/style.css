@@ -91,6 +91,7 @@ nav a {
 }
 .projects {
   background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
   margin-top: 200px;
   color: white;
 }
@@ -129,4 +130,27 @@ nav a {
   padding: 10px 15px;
   color: white;
   cursor: pointer;
+}
+
+/*Skills and qualities*/
+.skills-and-qualities {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  color: white;
+  margin-top: 50px;
+  text-align: center;
+}
+.skills-and-qualities h1 {
+  font-size: 50px;
+  background: -webkit-linear-gradient(#eee, #3062F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.skill-flex {
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+}
+.qualities {
+  list-style: none;
 }
