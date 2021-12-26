@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Vite App</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
   </head>
   <body>
@@ -19,11 +21,18 @@
 
         <nav>
           <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Projects</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </nav>
+
+        <div class="burger">
+          <div class="line"></div>
+          <div class="line"></div>
+          <div class="line"></div>
+        </div>
       </header>
       </div>
 
@@ -37,7 +46,7 @@
       </div>
       </div>
       
-      <div class="projects container">
+      <div id="projects" class="projects container">
         <h1 class="pr-h1">Projects</h1>
         <div class="pr-grid">
           <div class="project">
@@ -51,8 +60,8 @@
               <li>CSS</li>
             </ul>
             <div class="project-links">
-              <button class="site">Link to site</button>
-              <button class="github">Link to GitHub Repo</button>
+              <a target="_blank" href="https://flowwd.netlify.app/"><button class="site">Link to site</button></a>
+              <a href="https://github.com/Zabzx/Floww" target="_blank"><button class="github">Link to GitHub Repo</button></a>
             </div>
           </div>
           <div class="project">
@@ -65,8 +74,8 @@
               <li>CSS</li>
             </ul>
             <div class="project-links">
-              <button class="site">Link to site</button>
-              <button class="github">Link to GitHub Repo</button>
+              <a href="https://cloudtechh.netlify.app/" target="_blank"><button class="site">Link to site</button></a>
+              <a href="https://github.com/Zabzx/Static" target="_blank" rel="noopener noreferrer"><button class="github">Link to GitHub Repo</button></a>
             </div>
           </div>
           <div class="project">
@@ -80,8 +89,8 @@
               <li>API</li>
             </ul>
             <div class="project-links">
-              <button class="site">Link to site</button>
-              <button class="github">Link to GitHub Repo</button>
+              <a href="https://moviefevr.netlify.app/" target="_blank"><button class="site">Link to site</button></a>
+              <a href="https://github.com/Zabzx/MovieFevr-react-" target="_blank"><button class="github">Link to GitHub Repo</button></a>
             </div>
           </div>
           <div class="project">
@@ -94,14 +103,14 @@
               <li>CSS</li>
             </ul>
             <div class="project-links">
-              <button class="site">Link to site</button>
-              <button class="github">Link to GitHub Repo</button>
+              <a href="https://livedatecountdown.netlify.app/" target="_blank"><button class="site">Link to site</button></a>
+              <a href="https://github.com/Zabzx/Live-Countdown" target="_blank"><button class="github">Link to GitHub Repo</button></a>
             </div>
           </div>
         </div>
       </div>
 
-      <div class="skills-and-qualities container">
+      <div id="about" class="skills-and-qualities container">
         <h1>My Skills and Qualities</h1>
         <div class="skill-flex">
           <ul class="skills">
@@ -138,7 +147,7 @@
       </div>
 
       <div class="container">
-      <section class="contact-me">
+      <section id="contact" class="contact-me">
         <h1>Contact Me</h1>
         <form action="https://formsubmit.co/ziabeherphillips@gmail.com" method="POST" id="contact-form">
             <input type="email" name="email" placeholder="Your Email Address" required class="user-email" id="user-email"> <br>

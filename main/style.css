@@ -1,8 +1,11 @@
 /*Global*/
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+html{
+  scroll-behavior: smooth;
+}
 body {
-  overflow-x: hidden;
   font-family: 'Bebas Neue', cursive;
+  overflow-x: hidden;
 }
 * {
   box-sizing: border-box;
@@ -24,7 +27,8 @@ main {
 
 /*Header*/
 .header-container {
-  background-color: rgba(0, 0, 0, 0.8)
+  background-color: rgba(0, 0, 0, 0.8);
+  width: 100vw;
 }
 header {
   display: flex;
@@ -47,6 +51,19 @@ nav a {
   color: white;
   text-decoration: none;
   font-size: 25px;
+  transition: 0.3s;
+}
+nav a:hover {
+  color: #3062F7;
+}
+.burger {
+  display: none;
+}
+.line {
+  height: 5px;
+  width: 35px;
+  margin-top: 5px;
+  background-color: white;
 }
 /*Hero*/
 .hero {
@@ -169,6 +186,9 @@ nav a {
 .contact-me h1 {
   text-align: center;
   font-size: 40px;
+  background: -webkit-linear-gradient(#eee, #3062F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 #user-email {
   height: 50px;
@@ -191,4 +211,69 @@ nav a {
   font-size: 20px;
   font-family: 'Bebas Neue', cursive;
   cursor: pointer;
+}
+
+/*Responsive*/
+@media only screen and (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+    width: 100%;
+}
+  .burger {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+  }
+  /*Hero*/
+  .hero {
+    width: 100%;
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 30px;
+  }
+  .hero p {
+    font-size: 16px;
+  }
+  .read-more {
+    font-size: 16px;
+  }
+
+  /*Projects*/
+  .pr-h1 {
+    font-size: 30px;
+  }
+  .pr-grid {
+    grid-template-columns: 1fr;
+    gap: 5em;
+  }
+  .projects {
+    width: 100%;
+  }
+  .project {
+    width: 100%;
+  }
+
+  /*Skill and qulities*/
+  .skills-and-qualities h1 {
+    font-size: 30px;
+  }
+  .skills {
+    list-style: none;
+  }
+  .skill-flex {
+    font-size: 16px;
+  }
+
+  /*Contact*/
+  .contact-me {
+    width: 100%;
+  }
+  .contact-me h1 {
+    font-size: 30px;
+  background: -webkit-linear-gradient(#eee, #3062F7);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  }
 }
