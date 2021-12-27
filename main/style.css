@@ -165,8 +165,9 @@ nav a:hover {
   -webkit-text-fill-color: transparent;
 }
 .skill-flex {
+  margin-top: 20px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   font-size: 25px;
 }
 .qualities {
@@ -182,6 +183,7 @@ nav a:hover {
   color: white;
   margin-top: 50px;
   width: 50%;
+  padding: 20px;
 }
 .contact-me h1 {
   text-align: center;
@@ -211,6 +213,15 @@ nav a:hover {
   font-size: 20px;
   font-family: 'Bebas Neue', cursive;
   cursor: pointer;
+}
+
+footer {
+  margin-top: 40px;
+  padding: 15px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  text-align: center;
+  font-size: 25px;
 }
 
 /*Responsive*/

@@ -34,7 +34,8 @@ const moonGeometry = new THREE.SphereGeometry(4, 32, 16)
 const moonTexture = new THREE.TextureLoader().load('moontexture.jpg')
 const moonGeometryMaterial = new THREE.MeshStandardMaterial({map: moonTexture})
 const moon = new THREE.Mesh(moonGeometry, moonGeometryMaterial)
-moon.position.setZ(-55)
+moon.position.setZ(-25)
+moon.position.setX(20)
 scene.add(moon)
 
 
@@ -45,7 +46,7 @@ const earthGeometryMaterial = new THREE.MeshStandardMaterial({map: earthTexture}
 const earth = new THREE.Mesh(earthGeometry, earthGeometryMaterial);
 scene.add(earth);
 
-earth.position.setZ(-30)
+earth.position.setZ(-20)
 
 //Add random stars
 function addStar() {
