@@ -219,11 +219,27 @@ nav a:hover {
     overflow-x: hidden;
     width: 100%;
 }
+/*Header*/
   .burger {
     display: block;
   }
   .nav-links {
-    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 50px;
+    position: absolute;
+    height: 72vh;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.8);
+    list-style: none;
+    transform: translateX(100%);
+    transition: 0.3s;
+  }
+  .nav-active {
+    transform: translateX(0%);
+  }
+  .no-scroll {
+    overflow: hidden
   }
   /*Hero*/
   .hero {

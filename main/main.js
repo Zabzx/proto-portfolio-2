@@ -88,3 +88,13 @@ function moveCamera() {
 }
 
 document.body.onscroll = moveCamera
+
+//Navbar
+const button = document.querySelector('.burger');
+const menu = document.querySelector('.nav-links');
+const body = document.querySelector('body')
+
+button.addEventListener('click', () => {
+  menu.classList.toggle('nav-active');
+  body.classList.toggle('no-scroll')
+})
