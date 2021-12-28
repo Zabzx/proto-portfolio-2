@@ -1,5 +1,4 @@
-/*Global*/
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+/*Global*/@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@300;400&family=Lato&display=swap');
 html{
   scroll-behavior: smooth;
 }
@@ -81,6 +80,8 @@ nav a:hover {
 }
 .hero p {
   font-size: 25px;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.1;
 }
 .read-more {
   margin-top: 20px;
@@ -128,6 +129,8 @@ nav a:hover {
 .project p {
   padding: 20px;
   font-size: 20px;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.1;
 }
 .project-img {
   width: 100%;
@@ -172,6 +175,8 @@ nav a:hover {
 }
 .qualities {
   list-style: none;
+  font-family: 'Cairo', sans-serif;
+  line-height: 1.1;
 }
 
 /*Contact*/
@@ -302,5 +307,8 @@ footer {
   background: -webkit-linear-gradient(#eee, #3062F7);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  }
+  #user-email {
+    width: 90%;
   }
 }

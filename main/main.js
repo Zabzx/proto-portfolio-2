@@ -95,7 +95,17 @@ const button = document.querySelector('.burger');
 const menu = document.querySelector('.nav-links');
 const body = document.querySelector('body')
 
+//Nav links
+const links = document.querySelectorAll('.nav-links li');
+
 button.addEventListener('click', () => {
   menu.classList.toggle('nav-active');
   body.classList.toggle('no-scroll')
+})
+
+links.forEach((link) => {
+  link.addEventListener('click', () => {
+    body.classList.remove('no-scroll')
+    menu.classList.remove('nav-active')
+  })
 })
